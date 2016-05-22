@@ -1,0 +1,22 @@
+{
+    "name": "tdomarkas/string-decorator-php",
+    "description": "Decorates strings with indexed callbacks",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tadas Domarkas",
+            "email": "tadas@domarkas.lt"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {"StringDecorator\\": "src"}
+    },
+    "autoload-dev": {
+        "psr-4": {"StringDecorator\\": "tests"}
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.3"
+    }
+}
