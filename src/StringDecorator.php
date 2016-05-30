@@ -25,11 +25,24 @@ class StringDecorator
         $this->text = $text;
     }
 
+    /**
+     * Create a string decorator.
+     * 
+     * @param string $text
+     * @return static
+     */
     public static function create($text)
     {
         return new static($text);
     }
 
+    /**
+     * Apply a decorator at specified indices.
+     * 
+     * @param integer $start
+     * @param integer $end
+     * @param DecoratorInterface $decorator
+     */
     public function apply($start, $end, DecoratorInterface $decorator)
     {
         $this->indexes[] = new DecoratorIndex($start, $end, $decorator);
@@ -68,6 +81,11 @@ class StringDecorator
         return $this->text;
     }
 
+    /**
+     * Decorate a string.
+     * 
+     * @return string
+     */
     public function render()
     {
         return (string) $this;
